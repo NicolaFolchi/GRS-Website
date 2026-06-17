@@ -35,16 +35,16 @@ Value: https://formspree.io/f/your-form-id
 
 The recipient email is configured inside Formspree and is not displayed on the website.
 
-The workflow builds with:
+The workflow builds with optional environment variables from repository variables:
 
 ```bash
-NEXT_PUBLIC_BASE_PATH=/${{ github.event.repository.name }} npm run build
+NEXT_PUBLIC_BASE_PATH=${{ vars.NEXT_PUBLIC_BASE_PATH }} npm run build
 ```
 
-That makes assets work when hosted at a project URL such as:
+For the configured custom domain `globalrentalsolutions.llc`, leave `NEXT_PUBLIC_BASE_PATH` unset so assets resolve from the domain root.
+
+If hosting at a GitHub project URL instead, set `NEXT_PUBLIC_BASE_PATH` to the repository path, for example:
 
 ```text
-https://<username>.github.io/GlobalRentalSolutionsWebsite/
+/GRS-Website
 ```
-
-For a custom domain hosted at the root, remove the `NEXT_PUBLIC_BASE_PATH` environment variable from the workflow.
