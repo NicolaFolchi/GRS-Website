@@ -83,20 +83,22 @@ body {
 }
 
 .input-field {
-  color: #ffffff;
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(220, 225, 230, 0.9);
+  color: var(--navy);
   caret-color: var(--gold);
 }
 
 .input-field::placeholder {
-  color: rgba(255, 255, 255, 0.48);
+  color: rgba(33, 37, 41, 0.48);
 }
 
 .input-field:-webkit-autofill,
 .input-field:-webkit-autofill:hover,
 .input-field:-webkit-autofill:focus {
-  -webkit-text-fill-color: #ffffff;
+  -webkit-text-fill-color: var(--navy);
   caret-color: var(--gold);
-  box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.08) inset;
+  box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.96) inset;
   transition: background-color 9999s ease-out;
 }
 
