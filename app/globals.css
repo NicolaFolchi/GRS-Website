@@ -82,6 +82,24 @@ body {
   box-shadow: 0 0 0 4px rgba(197, 160, 89, 0.14);
 }
 
+.input-field {
+  color: #ffffff;
+  caret-color: var(--gold);
+}
+
+.input-field::placeholder {
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.input-field:-webkit-autofill,
+.input-field:-webkit-autofill:hover,
+.input-field:-webkit-autofill:focus {
+  -webkit-text-fill-color: #ffffff;
+  caret-color: var(--gold);
+  box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.08) inset;
+  transition: background-color 9999s ease-out;
+}
+
 .industrial-grid {
   background-image: linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
