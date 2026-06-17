@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0b1c3d;
+  --gold: #c5a059;
+  --charcoal: #212529;
+  --white: #ffffff;
+  --soft: #f5f7fa;
+  --cool: #dce1e6;
+  --steel: #b4bed2;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--white);
+  color: var(--charcoal);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Inter,
+    "Segoe UI", sans-serif;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(197, 160, 89, 0.26);
+}
+
+.shell {
+  width: min(1120px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.eyebrow {
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.premium-card,
+.premium-button,
+.nav-link,
+.input-field {
+  transition-duration: 260ms;
+  transition-timing-function: var(--ease-out);
+}
+
+.premium-card {
+  transition-property: transform, border-color, box-shadow, background-color;
+  will-change: transform;
+}
+
+.premium-button {
+  transition-property: transform, background-color, color, border-color, box-shadow;
+}
+
+.premium-button:active,
+.premium-card:active {
+  transform: scale(0.985);
+}
+
+.nav-link {
+  transition-property: color, opacity;
+}
+
+.input-field {
+  transition-property: border-color, box-shadow, background-color;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: rgba(197, 160, 89, 0.82);
+  box-shadow: 0 0 0 4px rgba(197, 160, 89, 0.14);
+}
+
+.industrial-grid {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.gold-line {
+  background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.9), transparent);
+}
+
+.reveal-block,
+.stagger-group .reveal-item {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translate3d(0, 44px, 0) scale(0.985);
+  transition-property: opacity, transform, filter;
+  transition-duration: 1050ms;
+  transition-timing-function: var(--ease-out);
+  will-change: opacity, transform, filter;
+}
+
+.reveal-block[data-visible="true"],
+.stagger-group[data-visible="true"] .reveal-item {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.stagger-group .reveal-item:nth-child(1) {
+  transition-delay: 40ms;
+}
+
+.stagger-group .reveal-item:nth-child(2) {
+  transition-delay: 150ms;
+}
+
+.stagger-group .reveal-item:nth-child(3) {
+  transition-delay: 260ms;
+}
+
+.stagger-group .reveal-item:nth-child(4) {
+  transition-delay: 370ms;
+}
+
+.hero-title,
+.hero-copy,
+.hero-actions,
+.hero-visual {
+  opacity: 0;
+  animation: heroReveal 1150ms var(--ease-out) forwards;
+}
+
+.hero-title {
+  filter: blur(12px);
+  transform: translate3d(0, 42px, 0) scale(0.985);
+  animation-delay: 120ms;
+}
+
+.hero-copy {
+  transform: translate3d(0, 28px, 0);
+}
+
+.hero-copy-delay {
+  animation-delay: 260ms;
+}
+
+.hero-actions {
+  transform: translate3d(0, 26px, 0);
+  animation-delay: 420ms;
+}
+
+.hero-visual {
+  transform: translate3d(0, 34px, 0) scale(0.975);
+  filter: blur(10px);
+  animation-delay: 260ms;
+}
+
+@keyframes heroReveal {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.mask-fade {
+  mask-image: linear-gradient(180deg, black 78%, transparent 100%);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .premium-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 76px rgba(11, 28, 61, 0.14);
+  }
+
+  .premium-button:hover {
+    transform: translateY(-1px);
+  }
+
+  .nav-link:hover {
+    color: var(--gold);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 120ms !important;
+  }
+
+  .reveal-block,
+  .stagger-group .reveal-item,
+  .hero-title,
+  .hero-copy,
+  .hero-actions,
+  .hero-visual {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+  }
+}

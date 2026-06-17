@@ -1,0 +1,93 @@
+[
+  {
+    "file": "image1.png",
+    "source": "ppt/media/image1.png",
+    "width": 759,
+    "height": 540,
+    "format": "PNG"
+  },
+  {
+    "file": "image10.png",
+    "source": "ppt/media/image10.png",
+    "width": 1552,
+    "height": 1013,
+    "format": "PNG"
+  },
+  {
+    "file": "image11.png",
+    "source": "ppt/media/image11.png",
+    "width": 756,
+    "height": 535,
+    "format": "PNG"
+  },
+  {
+    "file": "image12.jpeg",
+    "source": "ppt/media/image12.jpeg",
+    "width": 1252,
+    "height": 936,
+    "format": "JPEG"
+  },
+  {
+    "file": "image13.jpeg",
+    "source": "ppt/media/image13.jpeg",
+    "width": 1080,
+    "height": 664,
+    "format": "JPEG"
+  },
+  {
+    "file": "image2.jpg",
+    "source": "ppt/media/image2.jfif",
+    "width": 1080,
+    "height": 809,
+    "format": "JPG"
+  },
+  {
+    "file": "image3.png",
+    "source": "ppt/media/image3.png",
+    "width": 986,
+    "height": 1337,
+    "format": "PNG"
+  },
+  {
+    "file": "image4.png",
+    "source": "ppt/media/image4.png",
+    "width": 985,
+    "height": 1312,
+    "format": "PNG"
+  },
+  {
+    "file": "image5.jpeg",
+    "source": "ppt/media/image5.jpeg",
+    "width": 607,
+    "height": 1080,
+    "format": "JPEG"
+  },
+  {
+    "file": "image6.jpeg",
+    "source": "ppt/media/image6.jpeg",
+    "width": 810,
+    "height": 1080,
+    "format": "JPEG"
+  },
+  {
+    "file": "image7.jpeg",
+    "source": "ppt/media/image7.jpeg",
+    "width": 479,
+    "height": 1080,
+    "format": "JPEG"
+  },
+  {
+    "file": "image8.png",
+    "source": "ppt/media/image8.png",
+    "width": 984,
+    "height": 1287,
+    "format": "PNG"
+  },
+  {
+    "file": "image9.png",
+    "source": "ppt/media/image9.png",
+    "width": 985,
+    "height": 1309,
+    "format": "PNG"
+  }
+]
